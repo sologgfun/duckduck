@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-vant-weapp@^0.5.27:
-  version "0.5.27"
-  resolved "https://registry.yarnpkg.com/vant-weapp/-/vant-weapp-0.5.27.tgz#b029980dbdcc7f90aff9dc9db8e2bac5ef118d1b"
-  integrity sha512-wmbpPWbpIk/Nl022Yfu0LNV+rSBPxnWTsZePVo6De4FxY3SWw47+Ip6rxLgdnG00/FntbymgvVw4xlaW+WmC+Q==
+"@vant/weapp@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@vant/weapp/-/weapp-1.1.0.tgz#8f4cc3614af516df6f5bc847dc85c946b5389f85"
+  integrity sha512-OfYxGo96Ui9a5YfTBtTY3+Ox0PHpzQ+BprvcT0Rbe9rhiaiunIEcmo+cZ1280ES74Y9dnsGf10IjnX5D8Z6sww==
