@@ -4,6 +4,9 @@
     "van-cell": "@vant/weapp/cell",
     "van-cell-group": "@vant/weapp/cell-group",
     "van-dropdown-menu": "@vant/weapp/dropdown-menu",
-    "van-dropdown-item": "@vant/weapp/dropdown-item"
+    "van-dropdown-item": "@vant/weapp/dropdown-item",
+    "van-tabbar": "@vant/weapp/tabbar",
+    "van-tabbar-item": "@vant/weapp/tabbar-item",
+    "van-field": "/@vant/weapp/field"
   }
 }

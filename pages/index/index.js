@@ -4,13 +4,33 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
+    minHeight:{minHeight: 100 },
+    option1: [
+      { text: '全部商品', value: 0 },
+      { text: '新款商品', value: 1 },
+      { text: '活动商品', value: 2 }
+    ],
+    option2: [
+      { text: '默认排序', value: 'a' },
+      { text: '好评排序', value: 'b' },
+      { text: '销量排序', value: 'c' }
+    ],
+    value1: 0,
+    value2: 'a',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    active: 0,
+    icon: {
+      normal: 'https://img.yzcdn.cn/vant/user-inactive.png',
+      active: 'https://img.yzcdn.cn/vant/user-active.png'
+    }
+  },
+  onChange(event) {
+    this.setData({ active: event.detail });
   },
   //事件处理函数
-  bindViewTap: function() {
+  bindViewTap: function () {
     wx.navigateTo({
       url: '../logs/logs'
     })
@@ -21,7 +41,7 @@ Page({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })
-    } else if (this.data.canIUse){
+    } else if (this.data.canIUse) {
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
       app.userInfoReadyCallback = res => {
@@ -43,7 +63,7 @@ Page({
       })
     }
   },
-  getUserInfo: function(e) {
+  getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
