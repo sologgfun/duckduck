@@ -18,6 +18,7 @@ Page({
     ],
     value1: 0,
     value2: 'a',
+    search:"",
     userInfo: {},
     mockdata: [],
     hasUserInfo: false,
