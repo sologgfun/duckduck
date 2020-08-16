@@ -1,6 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp()
+import mockdata from "./mock-data.js"
 
 Page({
   data: {
@@ -18,9 +19,10 @@ Page({
     value1: 0,
     value2: 'a',
     userInfo: {},
+    mockdata: [],
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    active: 0,
+    active: 1,
     icon: {
       normal: 'https://img.yzcdn.cn/vant/user-inactive.png',
       active: 'https://img.yzcdn.cn/vant/user-active.png'
@@ -35,7 +37,14 @@ Page({
       url: '../logs/logs'
     })
   },
+  setMockdata(){
+    console.log(mockdata)
+    this.setData({
+      mockdata: mockdata
+    })
+  },
   onLoad: function () {
+    this.setMockdata();
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
